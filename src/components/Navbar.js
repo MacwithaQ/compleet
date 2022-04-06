@@ -1,9 +1,11 @@
 import React from "react";
+import Logo from "./Logo";
 
 const Navbar = () => {
   return (
     <div className="navBar">
-      <div>Nav Bar</div>
+      <Logo className="logo" />
+      <div className="navigationTab">Hello</div>
     </div>
   );
 };

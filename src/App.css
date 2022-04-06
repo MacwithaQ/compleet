@@ -8,7 +8,8 @@
 }
 
 .MainPanel {
-  background-color: purple;
+  background-color: #be1f1d;
+  opacity: 0.5;
   width: 80vw;
   height: 90vh;
   margin: 5vh;
@@ -17,8 +18,21 @@
 
 .navBar {
   display: flex;
+  align-self: flex-start;
   flex-direction: column;
-  width: 100vh;
+  text-align: center;
+  width: 100vw;
   height: 100vh;
-  background-color: aqua;
+  background-color: #ff6334;
+}
+
+.logo {
+  align-self: center;
+}
+
+.navigationTab {
+  background-color: #ffb400;
+  padding: 5px;
+  height: 100vh;
+  border-top-right-radius: 20px;
 }
