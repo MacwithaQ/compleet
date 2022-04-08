@@ -1,40 +1,33 @@
 import React from "react";
-import { Checkbox } from "@mui/material";
-import PlayIcon from "../Icons/PlayIcon";
-import PauseIco from "../Icons/PauseIco";
+import { useState } from "react";
+
+//Component Imports
+import AddIco from "../Icons/AddIco";
+import TaskStore from "../stores/taskStore";
+import CreatedTask from "./CreatedTask";
+import CreateTask from "./CreateTask";
+//
 
 const Home = () => {
+  const [addTask, setAddTask] = useState(false);
+  const taskList = TaskStore.tasks.map((task) => <CreatedTask task={task} />);
+  const handletaskAdd = () => {
+    //* */ note: inserting delay this way -> setTimeout(() => { }, 1000)
+    setAddTask(!addTask);
+  };
+
   return (
     <div>
       <div className="MainPanel">
-        <div className="taskCreate">
-          <div className="taskDetails">
-            <div className="taskDiv">
-              <a className="taskTitle">Wash Dishes</a>
-            </div>
-            <div className="taskDiv">
-              <a className="taskDescription">
-                Washing dishes manually using a sponge and soap. Testing how
-                long this can be before clipping
-              </a>
-            </div>
+        {taskList}
+        {addTask ? (
+          <CreateTask handletaskAdd={handletaskAdd} />
+        ) : (
+          <div className="taskAdd" onClick={handletaskAdd}>
+            <AddIco className="taskAddIco" />
+            <a className="taskAddText">Add task</a>
           </div>
-          <div className="taskActions">
-            <a className="timer">00:00:00</a>
-            <PauseIco className="clickableTaskAction" />
-            <PlayIcon className="clickableTaskAction" />
-            <Checkbox
-              sx={{
-                color: "#96D900",
-                "&.Mui-checked": {
-                  color: "#96D900",
-                },
-              }}
-              size="large"
-              className="clickableTaskAction"
-            />
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );
