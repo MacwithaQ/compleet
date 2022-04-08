@@ -39,7 +39,10 @@
 /* Nav Tab */
 
 .navTab {
+  display: flex;
+  flex-direction: column;
   background-color: #ffb400;
+  justify-content: space-around;
   padding: 5px;
   height: 100vh;
   margin-top: 10px;
@@ -51,8 +54,8 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
-  margin-top: 4vh;
-  justify-content: space-between;
+  margin: 5px;
+  justify-content: space-around;
   transition: all 0.1s ease-in-out;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -63,12 +66,13 @@
   transform: scale(1.1);
 }
 
-/* Task Create */
+/* Created Task Component */
 
 .taskCreate {
   background-color: #ff6334;
+  display: flex;
   margin: 20px;
-  height: 75px;
+
   border-radius: 20px;
   padding: 15px;
 }
@@ -78,14 +82,37 @@
 }
 
 .taskDescription {
+  opacity: 50%;
 }
 
 .taskDiv {
   margin-bottom: 5px;
 }
 
-.taskIcon {
-  height: 20px;
-  width: 20px;
-  object-fit: fill;
+.taskDetails {
+  background-color: aliceblue;
+  height: 100%;
+  width: 60%;
+}
+
+.taskActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.clickableTaskAction {
+  margin-left: 0.2em;
+  transition: all 0.1s ease-in-out;
+}
+
+.clickableTaskAction:hover {
+  transform: scale(1.1);
+}
+
+.timer {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 700;
 }

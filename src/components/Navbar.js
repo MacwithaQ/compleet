@@ -4,6 +4,7 @@ import CategoriesIco from "../Icons/CategoriesIco";
 import DailyPlannerIco from "../Icons/DailyPlannerIco";
 import CalendarIco from "../Icons/CalendarIco";
 import SettingsIco from "../Icons/SettingsIco";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
