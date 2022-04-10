@@ -12,10 +12,12 @@
     "cross-env": "^7.0.3",
     "electron-is-dev": "^2.0.0",
     "mobx": "^6.5.0",
+    "mobx-react": "^7.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
+    "uifx": "^2.0.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

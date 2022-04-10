@@ -84,11 +84,13 @@
 .taskCreateDetails {
   display: flex;
   flex-direction: column;
+  width: 100vw;
 }
 
 .taskTitleCreate {
+  width: 100%;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 16px;
   border-width: 0px;
   border-top-style: hidden;
   border-right-style: hidden;
@@ -199,6 +201,41 @@ input:focus {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-weight: 700;
+}
+
+/* Task Completion */
+
+.createdTaskChecked {
+  background-color: #ff6334;
+  display: flex;
+  margin: 10px;
+  border-radius: 20px;
+  padding: 15px;
+  animation: jump-shaking 0.5s 1;
+}
+
+@keyframes jump-shaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateY(-4px);
+  }
+  35% {
+    transform: translateY(-4px) rotate(2deg);
+  }
+  55% {
+    transform: translateY(-4px) rotate(-2deg);
+  }
+  65% {
+    transform: translateY(-4px) rotate(2deg);
+  }
+  75% {
+    transform: translateY(-4px) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
 }
 
 /* Add task div */
