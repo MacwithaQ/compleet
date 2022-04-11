@@ -7,6 +7,8 @@ import checkFX from "../media/checkFX.wav";
 // Import Icons and Stores
 import PlayIcon from "../Icons/PlayIcon";
 import PauseIco from "../Icons/PauseIco";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleMinus } from "@fortawesome/free-solid-svg-icons";
 import TaskStore from "../stores/taskStore";
 
 const CreatedTask = ({ task }) => {
@@ -15,12 +17,18 @@ const CreatedTask = ({ task }) => {
     volume: 0.4, // number between 0.0 ~ 1.0
     throttleMs: 100,
   });
-  const handleClick = () => {
+
+  const handleClickCheck = () => {
     //* */ note: inserting delay this way -> setTimeout(() => { }, 1000)
     checkSound.play();
     setTimeout(() => {
-      task.taskStatus = true;
-    }, 400);
+      TaskStore.completeTask(task);
+    }, 300);
+  };
+
+  const handleClickDelete = () => {
+    console.log(task.id_);
+    TaskStore.deleteTask(task);
   };
 
   return (
@@ -38,7 +46,7 @@ const CreatedTask = ({ task }) => {
         <PauseIco className="clickableTaskAction" />
         <PlayIcon className="clickableTaskAction" />
         <Checkbox
-          onClick={handleClick}
+          onClick={handleClickCheck}
           sx={{
             color: "#96D900",
             "&.Mui-checked": {
@@ -46,7 +54,13 @@ const CreatedTask = ({ task }) => {
             },
           }}
           size="large"
+          defaultChecked={false}
           className="clickableTaskAction"
+        />
+        <FontAwesomeIcon
+          className="deleteIcon fa-1x"
+          icon={faCircleMinus}
+          onClick={handleClickDelete}
         />
       </div>
     </div>

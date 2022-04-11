@@ -154,11 +154,24 @@ input:focus {
 /* Created Task Component */
 
 .createdTask {
+  position: relative;
   background-color: #ff6334;
   display: flex;
   margin: 10px;
   border-radius: 20px;
   padding: 15px;
+}
+
+.deleteIcon {
+  position: absolute;
+  right: 2%;
+  top: 8%;
+  color: #96d900;
+  transition: all 0.1s ease-in-out;
+}
+
+.deleteIcon:hover {
+  transform: scale(1.1);
 }
 
 .taskTitle {
