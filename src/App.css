@@ -179,6 +179,8 @@ input:focus {
 }
 
 .taskDescription {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   opacity: 50%;
 }
 
@@ -211,6 +213,16 @@ input:focus {
 }
 
 .timer {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 700;
+}
+
+.taskCategoryIcon {
+  margin-bottom: -12px;
+}
+
+.taskCategoryTitle {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-weight: 700;

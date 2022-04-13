@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import TaskStore from "../stores/taskStore";
+import MiniCategoryIco from "../Icons/MiniCategoryIco";
 
 const CreateTask = ({ handletaskAdd }) => {
   const [task, setTask] = useState({
@@ -41,6 +42,7 @@ const CreateTask = ({ handletaskAdd }) => {
               onChange={handleOnChange}
             />
           </div>
+          <MiniCategoryIco className="taskCategoryIcon" />
         </div>
       </div>
       <div className="addTaskButtonsSection">

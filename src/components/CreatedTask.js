@@ -7,6 +7,7 @@ import checkFX from "../media/checkFX.wav";
 // Import Icons and Stores
 import PlayIcon from "../Icons/PlayIcon";
 import PauseIco from "../Icons/PauseIco";
+import MiniCategoryIco from "../Icons/MiniCategoryIco";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleMinus } from "@fortawesome/free-solid-svg-icons";
 import TaskStore from "../stores/taskStore";
@@ -39,6 +40,10 @@ const CreatedTask = ({ task }) => {
         </div>
         <div className="taskDiv">
           <a className="taskDescription">{task.description}</a>
+        </div>
+        <div>
+          <MiniCategoryIco className="taskCategoryIcon" />
+          <a className="taskCategoryTitle">{task.taskCategory}</a>
         </div>
       </div>
       <div className="taskActions">
